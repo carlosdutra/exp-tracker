@@ -1,3 +1,4 @@
+const { masterKey, port, dbname } = require("./config");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -8,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 mongoose.connect(
-	"mongodb+srv://exptracker:KtdX3F8lTMOpdzsg@cluster0.uxs3b.mongodb.net/exptracker?retryWrites=true&w=majority",
+	`mongodb+srv://${dbname}:${masterKey}@cluster0.uxs3b.mongodb.net/${dbname}?retryWrites=true&w=majority`,
 	{
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
@@ -73,6 +74,6 @@ app.delete("/delete/:id", async (req, res) => {
 	res.send("Data was deleted successfully");
 });
 
-app.listen(3001, () => {
+app.listen(port, () => {
 	console.log("Server running on 3001");
 });
