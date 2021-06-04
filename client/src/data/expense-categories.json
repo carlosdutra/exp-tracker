@@ -1,0 +1,302 @@
+[
+    {
+       "categorySection":"Entertainment",
+       "categoryColor":"#104f55",
+       "categories":[
+          {
+             "id":1,
+             "name":"Arts"
+          },
+          {
+             "id":2,
+             "name":"Music"
+          },
+          {
+             "id":3,
+             "name":"Movies & DVDs"
+          },
+          {
+             "id":4,
+             "name":"Newspaper & Magazines"
+          }
+       ]
+    },
+    {
+       "categorySection":"Education",
+       "categoryColor":"#1d909a",
+       "categories":[
+          {
+             "id":5,
+             "name":"Tuition"
+          },
+          {
+             "id":6,
+             "name":"Student Loan"
+          },
+          {
+             "id":7,
+             "name":"Books & Supplies"
+          }
+       ]
+    },
+    {
+       "categorySection":"Shopping",
+       "categoryColor":"#8383c3",
+       "categories":[
+          {
+             "id":8,
+             "name":"Clothing"
+          },
+          {
+             "id":9,
+             "name":"Books"
+          },
+          {
+             "id":10,
+             "name":"Electronics & Software"
+          },
+          {
+             "id":11,
+             "name":"Hobbies"
+          },
+          {
+             "id":12,
+             "name":"Sporting Goods"
+          }
+       ]
+    },
+    {
+       "categorySection":"Personal Care",
+       "categoryColor":"#f68551",
+       "categories":[
+          {
+             "id":13,
+             "name":"Laundry"
+          },
+          {
+             "id":14,
+             "name":"Hair"
+          },
+          {
+             "id":15,
+             "name":"Spa & Massage"
+          }
+       ]
+    },
+    {
+       "categorySection":"Health & Fitness",
+       "categoryColor":"#6868b6",
+       "categories":[
+          {
+             "id":16,
+             "name":"Dentist"
+          },
+          {
+             "id":17,
+             "name":"Doctor"
+          },
+          {
+             "id":18,
+             "name":"Eye Care"
+          },
+          {
+             "id":19,
+             "name":"Pharmacy"
+          },
+          {
+             "id":20,
+             "name":"Health Insurance"
+          },
+          {
+             "id":21,
+             "name":"Gym"
+          },
+          {
+             "id":22,
+             "name":"Sports"
+          }
+       ]
+    },
+    {
+       "categorySection":"Kids",
+       "categoryColor":"#A53B69",
+       "categories":[
+          {
+             "id":23,
+             "name":"Kids"
+          },
+          {
+             "id":24,
+             "name":"Activities"
+          },
+          {
+             "id":25,
+             "name":"Allowance"
+          },
+          {
+             "id":26,
+             "name":"Baby Supplies"
+          },
+          {
+             "id":27,
+             "name":"Babysitter & Daycare"
+          },
+          {
+             "id":28,
+             "name":"Child Support"
+          },
+          {
+             "id":29,
+             "name":"Toys"
+          }
+       ]
+    },
+    {
+       "categorySection":"Food & Dining",
+       "categoryColor":"#ad8e5c",
+       "categories":[
+          {
+             "id":30,
+             "name":"Groceries"
+          },
+          {
+             "id":31,
+             "name":"Coffee Shops"
+          },
+          {
+             "id":32,
+             "name":"Fast Food"
+          },
+          {
+             "id":33,
+             "name":"Restaurants"
+          },
+          {
+             "id":34,
+             "name":"Alcohol"
+          }
+       ]
+    },
+    {
+       "categorySection":"Gifts & Donations",
+       "categoryColor":"#fca311",
+       "categories":[
+          {
+             "id":35,
+             "name":"Gift"
+          },
+          {
+             "id":36,
+             "name":"Charity"
+          }
+       ]
+    },
+    {
+       "categorySection":"Bills & Utilities",
+       "categoryColor":"#caffbf",
+       "categories":[
+          {
+             "id":37,
+             "name":"Television"
+          },
+          {
+             "id":38,
+             "name":"Home Phone"
+          },
+          {
+             "id":39,
+             "name":"Internet"
+          },
+          {
+             "id":40,
+             "name":"Mobile Phone"
+          },
+          {
+             "id":41,
+             "name":"Utilities"
+          },
+          {
+             "id":42,
+             "name":"Rent"
+          },
+          {
+             "id":43,
+             "name":"Mortgage"
+          }
+       ]
+    },
+    {
+       "categorySection":"Auto & Transport",
+       "categoryColor":"#e9d8a6",
+       "categories":[
+          {
+             "id":44,
+             "name":"Gas & Fuel"
+          },
+          {
+             "id":45,
+             "name":"Parking"
+          },
+          {
+             "id":46,
+             "name":"Service & Auto Parts"
+          },
+          {
+             "id":47,
+             "name":"Auto Payment"
+          },
+          {
+             "id":48,
+             "name":"Auto Insurance"
+          }
+       ]
+    },
+    {
+       "categorySection":"Travel",
+       "categoryColor":"#ffca3a",
+       "categories":[
+          {
+             "id":49,
+             "name":"Air Travel"
+          },
+          {
+             "id":50,
+             "name":"Hotel"
+          },
+          {
+             "id":51,
+             "name":"Rental Car & Taxi"
+          },
+          {
+             "id":52,
+             "name":"Vacation"
+          }
+       ]
+    },
+    {
+       "categorySection":"Taxes",
+       "categoryColor":"#f94144",
+       "categories":[
+          {
+             "id":53,
+             "name":"Federal Tax"
+          },
+          {
+             "id":54,
+             "name":"State Tax"
+          },
+          {
+             "id":55,
+             "name":"Local Tax"
+          },
+          {
+             "id":56,
+             "name":"Sales Tax"
+          },
+          {
+             "id":57,
+             "name":"Property Tax"
+          }
+       ]
+    }
+ ]
