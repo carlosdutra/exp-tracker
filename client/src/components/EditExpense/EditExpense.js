@@ -8,7 +8,7 @@ const EditExpense = (props) => {
 	const [isShown, setIsShown] = useState(false);
 
 	const handleOnSubmit = (expense) => {
-		Axios.put(`${process.env.REACT_API_URL}/update`, {
+		Axios.put(`${process.env.REACT_APP_URL}/update`, {
 			id: props.id,
 			newName: expense.expenseName,
 			newValue: expense.expenseValue,

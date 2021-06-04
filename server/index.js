@@ -1,13 +1,12 @@
-const port = process.env.PORT || 3001;
-const { masterKey, dbname } = require("./config");
+const { masterKey, dbname, port } = require("./config");
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors");
+const useCors = require("./middlewares/cors");
 const app = express();
 const ExpenseModel = require("./models/Expense");
 
 app.use(express.json());
-app.use(cors());
+useCors(app);
 
 mongoose.connect(
 	`mongodb+srv://${dbname}:${masterKey}@cluster0.uxs3b.mongodb.net/${dbname}?retryWrites=true&w=majority`,
@@ -41,7 +40,7 @@ app.post("/create", async (req, res) => {
 });
 
 app.get("/read", async (req, res) => {
-	ExpenseModel.find({}, (err, result) => {
+	await ExpenseModel.find({}, (err, result) => {
 		if (err) res.send(err);
 		res.send(result);
 	});
@@ -76,5 +75,5 @@ app.delete("/delete/:id", async (req, res) => {
 });
 
 app.listen(port, () => {
-	console.log(`Server running on ${port}`);
+	console.log(`Example app listening at http://localhost:${port}`);
 });

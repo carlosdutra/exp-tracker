@@ -3,3 +3,4 @@
 
 server/index.js
 .env
+.env.dev
