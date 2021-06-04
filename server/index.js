@@ -1,4 +1,5 @@
-const { masterKey, port, dbname } = require("./config");
+const port = process.env.PORT || 3001;
+const { masterKey, dbname } = require("./config");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -75,5 +76,5 @@ app.delete("/delete/:id", async (req, res) => {
 });
 
 app.listen(port, () => {
-	console.log("Server running on 3001");
+	console.log(`Server running on ${port}`);
 });

@@ -9,7 +9,7 @@ const ListExpenses = () => {
 	const [isLoaded, setIsLoaded] = useState(false);
 
 	useEffect(() => {
-		Axios.get("http://localhost:3001/read").then(
+		Axios.get(`${process.env.REACT_API_URL}/read`).then(
 			(response) => {
 				setExpenses(response.data);
 				setIsLoaded(true);

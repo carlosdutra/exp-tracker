@@ -9,7 +9,7 @@ const AddExpense = () => {
 	const [isShown, setIsShown] = useState(false);
 
 	const handleOnSubmit = (expense) => {
-		Axios.post("http://localhost:3001/create", expense);
+		Axios.post(`${process.env.REACT_API_URL}/create`, expense);
 	};
 
 	return (

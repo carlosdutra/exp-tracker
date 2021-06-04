@@ -6,7 +6,7 @@ const DeleteExpense = ({ id, name }) => {
 	const [isShown, setIsShown] = useState(false);
 
 	const deleteExpense = (id) => {
-		Axios.delete(`http://localhost:3001/delete/${id}`);
+		Axios.delete(`${process.env.REACT_API_URL}/delete/${id}`);
 		toaster.notify("Your expense was deleted");
 	};
 
