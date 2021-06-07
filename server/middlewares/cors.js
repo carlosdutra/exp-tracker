@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const options = {
 	origin: (o, callback) => {
-		console.log("Origin: ", origin, o);
+		// console.log("Origin: ", origin, o);
 		if (o === origin) {
 			return callback(null, true);
 		}

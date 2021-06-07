@@ -26,7 +26,7 @@ const ExpenseForm = (props) => {
 		const expense = {
 			expenseName,
 			expenseValue: currency(expenseValue).value,
-			expenseDate: new Date(expenseDate).toISOString(),
+			expenseDate: new Date(expenseDate.replace(/-/g, "/")).toISOString(),
 			expenseCategory,
 		};
 
