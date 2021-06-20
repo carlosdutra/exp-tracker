@@ -16,6 +16,11 @@ const ExpenseSchema = mongoose.Schema({
 	expenseCategory: {
 		type: String,
 	},
+	expenseOwner: {
+		type: mongoose.Schema.Types.ObjectId,
+		required: true,
+		ref: "Users",
+	},
 });
 
 const Expense = mongoose.model("Expense", ExpenseSchema, "expenses");
