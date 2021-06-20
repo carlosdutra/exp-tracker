@@ -1,24 +1,26 @@
-import { useState } from "react";
-import ListExpenses from "components/ListExpenses";
-import ExpenseFormContext from "contexts/ExpenseFormContext";
-import Sidenav from "components/SideNav";
-import { Pane } from "evergreen-ui";
+// import { useState } from "react";
+import Dashboard from "pages/Dashboard";
+import Signup from "auth/Signup";
+import Login from "auth/Login";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+// import AuthContext from "./contexts/AuthContext";
+// import useToken from "auth/Token"
 import "./App.css";
 
 function App() {
-	const [formIsVisible, setFormIsVisible] = useState(false);
+	// const [user, setUser] = useState(null);
+	// const { token, setToken } = useToken();
 
 	return (
-		<div className="App flex min-h-screen">
-			<ExpenseFormContext.Provider
-				value={{ formIsVisible, setFormIsVisible }}
-			>
-				<Sidenav />
-				<Pane padding={50} className="w-full">
-					<ListExpenses />
-				</Pane>
-			</ExpenseFormContext.Provider>
-		</div>
+		// <AuthContext.Provider value={{ user, setUser }}>
+		<Router>
+			<div className="App">
+				<Route exact path="/" component={Dashboard} />
+				<Route exact path="/register" component={Signup} />
+				<Route exact path="/login" component={Login} />
+			</div>
+		</Router>
+		// </AuthContext.Provider>
 	);
 }
 
