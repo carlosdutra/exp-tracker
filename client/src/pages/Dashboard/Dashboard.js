@@ -6,16 +6,12 @@ import { Pane } from "evergreen-ui";
 import useToken from "auth/Token";
 import useUser from "auth/User";
 import { Redirect } from "react-router-dom";
-import Axios from "axios";
 
 const Dashboard = () => {
 	const { token } = useToken();
 	const { user } = useUser();
-	const { name, email } = user;
 
 	if (!token) return <Redirect to="/login" />;
-
-	console.log("Dashboard");
 
 	return (
 		<div className="flex min-h-screen">
@@ -26,7 +22,7 @@ const Dashboard = () => {
 				paddingTop={20}
 				className="w-full"
 			>
-				<TopMenu name={name} email={email} />
+				<TopMenu name={user.name} email={user.email} />
 				<ListExpenses />
 			</Pane>
 		</div>
