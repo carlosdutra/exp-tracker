@@ -34,6 +34,9 @@ const Login = () => {
 		password: "",
 	});
 
+	// Loading state
+	const [loading, setLoading] = useState(false);
+
 	// Error state
 	const [error, setError] = useState("");
 
@@ -53,6 +56,7 @@ const Login = () => {
 		});
 
 		if (request) {
+			setLoading(true);
 			setUser(request.user);
 			setToken(request.token);
 			history.push("/");
@@ -75,7 +79,7 @@ const Login = () => {
 		<Pane className="flex items-center justify-center h-screen">
 			<Pane width={500}>
 				<Heading size={900} marginBottom={20}>
-					Login in to ExpTracker
+					Log in to ExpTracker
 				</Heading>
 				<form onSubmit={handleLogin}>
 					<TextInputField
@@ -103,6 +107,7 @@ const Login = () => {
 						height={48}
 						width="100%"
 						backgroundColor="#5f9578"
+						isLoading={loading}
 					>
 						Login
 					</Button>

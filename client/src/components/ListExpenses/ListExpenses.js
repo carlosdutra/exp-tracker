@@ -1,14 +1,13 @@
-import React, { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import Axios from "axios";
 import { Pane, Heading, Paragraph, InfoSignIcon, Spinner } from "evergreen-ui";
+import ListExpensePeriods from "components/ListExpensePeriods";
 import SingleExpense from "components/SingleExpense";
 import useToken from "auth/Token";
 
 const ListExpenses = () => {
 	const [expenses, setExpenses] = useState([]);
-	// const [error, setError] = useState(null);
 	const [isLoaded, setIsLoaded] = useState(false);
-
 	const { token } = useToken();
 
 	useEffect(() => {
@@ -16,26 +15,18 @@ const ListExpenses = () => {
 			headers: {
 				Authorization: `Bearer ${token}`,
 			},
-		}).then(
-			(response) => {
-				setExpenses(response.data);
-				setIsLoaded(true);
-			},
-			(err) => {
-				setIsLoaded(true);
-				// setError(err);
-			}
-		);
-	}, [expenses]);
+		}).then((response) => {
+			setExpenses(response.data);
+			setIsLoaded(true);
+		});
+	}, []);
 
-	// if (error) {
-	// 	return <Pane>Error: {error}</Pane>;
-	// } else
 	if (!isLoaded) {
 		return <Spinner size={48} />;
 	} else {
 		return (
-			<Pane>
+			<Pane marginBottom={36}>
+				<ListExpensePeriods entries={expenses} />
 				<Heading size={600}>Your expenses ({expenses.length})</Heading>
 				{expenses.length > 0 ? (
 					expenses

@@ -7,13 +7,18 @@ const DeleteExpense = ({ id, name }) => {
 	const [isShown, setIsShown] = useState(false);
 	const { token } = useToken();
 
-	const deleteExpense = (id) => {
-		Axios.delete(`${process.env.REACT_APP_URL}/delete/${id}`, {
-			headers: {
-				Authorization: `Bearer ${token}`,
-			},
-		});
-		toaster.notify("Your expense was deleted");
+	const deleteExpense = async (id) => {
+		try {
+			await Axios.delete(`${process.env.REACT_APP_URL}/delete/${id}`, {
+				headers: {
+					Authorization: `Bearer ${token}`,
+				},
+			});
+			toaster.notify("Your expense was deleted");
+			setIsShown(false);
+		} catch (err) {
+			toaster.danger(err);
+		}
 	};
 
 	return (
@@ -23,7 +28,7 @@ const DeleteExpense = ({ id, name }) => {
 				title={name}
 				intent="danger"
 				onConfirm={() => deleteExpense(id)}
-				onCloseComplete={() => setIsShown(false)}
+				// onCloseComplete={() => setIsShown(false)}
 				confirmLabel="Delete"
 			>
 				Are you sure you want to delete this item?
